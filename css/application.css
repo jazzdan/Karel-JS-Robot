@@ -4,8 +4,5 @@ body {
 }
 
 #instructions {
-  text-align: right;
+  float:right;
 }
-
-
-
