@@ -2,9 +2,8 @@
 
 */            
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-                                          value: "function myScript(){return 100;}\n",
-                                          path:  "mode",
                                           mode:  "javascript",
+                                          lineNumbers: true,
                                           theme: "monokai"
                                           });
 
