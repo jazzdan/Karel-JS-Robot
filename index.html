@@ -15,6 +15,7 @@
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/application.css" rel="stylesheet">
+    <link href="css/editor.css" rel="stylesheet">
     <style type="text/css">
       /* Override some defaults */
       html, body {
@@ -78,6 +79,9 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.5.3/backbone-min.js"></script>
+
+  <script src="js/libs/codemirror.js"></script>
+  <script src="mode/javascript/javascript.js"></script>
   </head>
 
   <body>
@@ -107,10 +111,21 @@
         </div>
         <div class="row">
           <div class="span10">
-            <h2>Main content</h2>
+            <h2>World</h2>
           </div>
           <div class="span4">
-            <h3>Secondary content</h3>
+            <h3>Editor</h3>
+            <form>
+              <textarea id="code" name="code">
+              </textarea>
+            </form>
+            <script type="application/javascript">
+              var myCodeMirror = CodeMirror(document.getElementById("code"), {
+                value: "function myScript(){return 100;}\n",
+                mode:  "javascript",
+                theme: "monokai"
+              });
+            </script>
           </div>
         </div>
       </div>
