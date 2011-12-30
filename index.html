@@ -15,6 +15,8 @@
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/application.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="css/monokai.css">
     <link href="css/editor.css" rel="stylesheet">
     <style type="text/css">
       /* Override some defaults */
@@ -71,17 +73,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
-
-<!-- Grab cdnjs' backbone -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.5.3/backbone-min.js"></script>
-
   <script src="js/libs/codemirror.js"></script>
   <script src="mode/javascript/javascript.js"></script>
+
   </head>
 
   <body>
@@ -110,22 +104,15 @@
             <div id="instructions"><button class="btn large primary">Instructions</button></div>
         </div>
         <div class="row">
-          <div class="span10">
+          <div class="span-two-thirds">
             <h2>World</h2>
           </div>
-          <div class="span4">
+          <div class="span-one-third">
             <h3>Editor</h3>
-            <form>
+            <form id="code">
               <textarea id="code" name="code">
               </textarea>
             </form>
-            <script type="application/javascript">
-              var myCodeMirror = CodeMirror(document.getElementById("code"), {
-                value: "function myScript(){return 100;}\n",
-                mode:  "javascript",
-                theme: "monokai"
-              });
-            </script>
           </div>
         </div>
       </div>
@@ -135,6 +122,17 @@
       </footer>
 
     </div> <!-- /container -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+
+  <!-- Grab cdnjs' backbone -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.5.3/backbone-min.js"></script>
+
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
 
   </body>
 </html>
